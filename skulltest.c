@@ -75,12 +75,12 @@ static int __init skulltest_init(void)
     cdev_init(skulltest_cdev, &skulltest_fops);
     skulltest_cdev->owner = THIS_MODULE;
     skulltest_cdev->ops = &skulltest_fops;
-    int res1 = cdev_add(skulltest_cdev ,dev ,1);
-    if(res1 == 0){
-        printk(KERN_ALERT "DEVICE FILE registration success"); 
-    }else{
-        printk(KERN_ALERT "DEVICE FILE registraion success"); 
-    }
+    // int res1 = cdev_add(skulltest_cdev ,dev ,1);
+    // if(res1 == 0){
+    //     printk(KERN_ALERT "DEVICE FILE registration success"); 
+    // }else{
+    //     printk(KERN_ALERT "DEVICE FILE registraion success"); 
+    // }
     printk(KERN_ALERT "Hello world thats a skulltest! %x %x , COMM: %s ,PID: %i \n",param1,param2,current->comm, current->pid);
     return 0;    
 }
