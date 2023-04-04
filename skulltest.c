@@ -71,10 +71,10 @@ static int __init skulltest_init(void)
         printk(KERN_ALERT "REGISTRATION FAILED");
     }
 
-    skulltest_cdev = cdev_alloc();
-    cdev_init(skulltest_cdev, &skulltest_fops);
-    skulltest_cdev->owner = THIS_MODULE;
-    skulltest_cdev->ops = &skulltest_fops;
+    // skulltest_cdev = cdev_alloc();
+    // cdev_init(skulltest_cdev, &skulltest_fops);
+    // skulltest_cdev->owner = THIS_MODULE;
+    // skulltest_cdev->ops = &skulltest_fops;
     // int res1 = cdev_add(skulltest_cdev ,dev ,1);
     // if(res1 == 0){
     //     printk(KERN_ALERT "DEVICE FILE registration success"); 
